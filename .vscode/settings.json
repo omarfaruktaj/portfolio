@@ -1,0 +1,17 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#04350F",
+    "titleBar.activeBackground": "#064B15",
+    "titleBar.activeForeground": "#F0FEF3"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always",
+    "source.addMissingImports.ts": "always",
+    "source.organizeImports.ts": "always",
+    "source.fixAll.ts": "always",
+    "source.organizeImports": "always",
+    "source.fixAll": "always"
+    // "source.removeUnused.ts": "always",
+  }
+}
