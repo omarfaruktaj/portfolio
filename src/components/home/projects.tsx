@@ -1,5 +1,5 @@
 import { Project } from "@/types";
-import ProjectCard from "../projects/project-card";
+import ProjectCard from "../project-card";
 
 export default async function Projects() {
   const res = await fetch("http://localhost:5000/api/projects");

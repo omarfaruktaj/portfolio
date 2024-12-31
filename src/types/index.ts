@@ -17,3 +17,16 @@ export type Skill = {
   category: "Frontend" | "Backend" | "Database" | "Tools" | "Soft Skills";
   proficiency: "Beginner" | "Intermediate" | "Advanced" | "Expert";
 };
+
+export type Blog = {
+  _id: string;
+  title: string;
+  content: string;
+  tags: string[];
+  author: string;
+  isPublished: boolean;
+  publicationDate: Date;
+  createdAt: Date;
+  updatedAt: Date;
+  image: string;
+};

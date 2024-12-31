@@ -19,15 +19,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
-  project: {
-    _id,
-    title,
-    description,
-    technologies,
-    link,
-
-    imageUrl,
-  },
+  project: { _id, title, description, technologies, link, imageUrl },
 }: ProjectCardProps) {
   return (
     <>
