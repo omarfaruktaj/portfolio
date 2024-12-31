@@ -86,3 +86,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose strong,
+.prose h6 {
+  color: var(--primary);
+}
