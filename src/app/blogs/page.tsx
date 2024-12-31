@@ -5,6 +5,8 @@ export default async function Blogs() {
   const result = await fetch(`${process.env.API_URL}/articles`, {
     cache: "no-store",
   });
+  console.log(`${process.env.API_URL}/articles`);
+
   const blogs: Blog[] = await result.json();
 
   return (

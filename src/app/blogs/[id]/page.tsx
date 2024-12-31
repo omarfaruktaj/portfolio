@@ -16,6 +16,7 @@ export default async function BlogPost({
   const response = await fetch(
     `${process.env.API_URL}/articles/${paramValue.id}`
   );
+  console.log(`${process.env.API_URL}/articles`);
 
   if (!response.ok) {
     throw new Error("Failed to fetch blogs");

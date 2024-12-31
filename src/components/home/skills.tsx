@@ -5,6 +5,7 @@ export default async function Skills() {
   const result = await fetch(`${process.env.API_URL}/skills`, {
     cache: "no-store",
   });
+  console.log(`${process.env.API_URL}/skills`);
 
   if (!result.ok) {
     throw new Error("Failed to fetch skills");

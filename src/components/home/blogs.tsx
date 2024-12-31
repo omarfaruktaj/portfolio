@@ -2,6 +2,7 @@ import { Blog } from "@/types";
 import BlogCard from "../blog-card";
 
 export default async function Blogs() {
+  console.log(`${process.env.API_URL}/articles`);
   const result = await fetch(`${process.env.API_URL}/articles`, {
     cache: "no-store",
   });

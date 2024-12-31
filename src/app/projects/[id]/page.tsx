@@ -17,6 +17,7 @@ export default async function ProjectDetails({
   const response = await fetch(
     `${process.env.API_URL}/projects/${paramsValue.id}`
   );
+  console.log(`${process.env.API_URL}/projects/${paramsValue.id}`);
 
   if (!response.ok) {
     throw new Error("Failed to fetch project");

@@ -6,6 +6,8 @@ export default async function Projects() {
     cache: "no-store",
   });
 
+  console.log(`${process.env.API_URL}/projects`);
+
   if (!res.ok) {
     throw new Error("Failed to fetch projects");
   }
