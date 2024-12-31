@@ -9,3 +9,10 @@ export type Project = {
   imageUrl: string;
   isFullStack: boolean;
 };
+
+export type Skill = {
+  _id: string;
+  name: string;
+  category: "Frontend" | "Backend" | "Database" | "Tools" | "Soft Skills";
+  proficiency: "Beginner" | "Intermediate" | "Advanced" | "Expert";
+};
