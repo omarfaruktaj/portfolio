@@ -130,19 +130,20 @@ export default function BlogCard({ blog }: BlogCardProps) {
     <Card className="max-w-sm h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
       <CardHeader className="p-0">
         <div className="relative h-48 w-full">
-          <Link href={`/blog/${blog._id}`}>
+          <Link href={`/blogs/${blog._id}`}>
             <Image
               src={image || "/placeholder.svg?height=200&width=400"}
               alt={title}
               height={200}
               width={400}
               objectFit="cover"
+              className="h-full"
             />
           </Link>
         </div>
       </CardHeader>
       <CardContent className="p-4">
-        <Link href={`/blog/${blog._id}`}>
+        <Link href={`/blogs/${blog._id}`}>
           <h2 className="text-xl font-semibold mb-2 line-clamp-2 hover:underline">
             {title}
           </h2>
@@ -159,7 +160,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
         </Link>
       </CardContent>
       <CardFooter className="p-4 pt-0 text-sm text-muted-foreground">
-        <Link href={`/blog/${blog._id}`}>
+        <Link href={`/blogs/${blog._id}`}>
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center">
               <CalendarIcon className="w-4 h-4 mr-1" />
