@@ -14,7 +14,7 @@ export default async function BlogPost({
   const paramValue = await params;
 
   const response = await fetch(
-    `http://localhost:5000/api/articles/${paramValue.id}`
+    `${process.env.API_URL}/articles/${paramValue.id}`
   );
 
   if (!response.ok) {

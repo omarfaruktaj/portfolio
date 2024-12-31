@@ -2,7 +2,7 @@ import BlogCard from "@/components/blog-card";
 import { Blog } from "@/types";
 
 export default async function Blogs() {
-  const result = await fetch("http://localhost:5000/api/articles", {
+  const result = await fetch(`${process.env.API_URL}/articles`, {
     cache: "no-store",
   });
   const blogs: Blog[] = await result.json();

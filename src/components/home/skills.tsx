@@ -2,7 +2,7 @@ import { Skill } from "@/types";
 import { Badge } from "../ui/badge";
 
 export default async function Skills() {
-  const result = await fetch("http://localhost:5000/api/skills", {
+  const result = await fetch(`${process.env.API_URL}/skills`, {
     cache: "no-store",
   });
 

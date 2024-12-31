@@ -15,7 +15,7 @@ export default async function ProjectDetails({
 }) {
   const paramsValue = await params;
   const response = await fetch(
-    `http://localhost:5000/api/projects/${paramsValue.id}`
+    `${process.env.API_URL}/projects/${paramsValue.id}`
   );
 
   if (!response.ok) {

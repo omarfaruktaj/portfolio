@@ -2,7 +2,7 @@ import ProjectCard from "@/components/project-card";
 import { Project } from "@/types";
 
 export default async function Projects() {
-  const res = await fetch("http://localhost:5000/api/projects", {
+  const res = await fetch(`${process.env.API_URL}/projects`, {
     cache: "no-store",
   });
 
