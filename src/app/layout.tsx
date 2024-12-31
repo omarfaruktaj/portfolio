@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
@@ -38,6 +39,7 @@ export default function RootLayout({
           <div className="max-w-[768px] mx-auto">
             <Navbar />
             <main className="min-h-screen mx-4 mt-28">{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

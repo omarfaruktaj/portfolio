@@ -61,7 +61,8 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
         <Image
           src={blog.image}
           alt={blog.title}
-          layout="fill"
+          height={300}
+          width={800}
           objectFit="cover"
           className="rounded-lg"
         />
