@@ -4,6 +4,14 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { JSX, useEffect, useState } from "react";
+import { ModeToggle } from "../mode-toggle";
+import { Separator } from "./separator";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./tooltip";
 
 export const FloatingNav = ({
   navItems,
@@ -11,6 +19,7 @@ export const FloatingNav = ({
 }: {
   navItems: {
     link: string;
+    name: string;
     label?: JSX.Element;
   }[];
   className?: string;
@@ -58,22 +67,33 @@ export const FloatingNav = ({
           className
         )}
       >
-        {/* <SunIcon />
-        <div className="pr-2">
+        {/* <SunIcon /> */}
+        <ModeToggle />
+        <div>
           <Separator orientation="vertical" className="h-6" />
-        </div> */}
-        {navItems.map((navItem, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative text-muted-foreground hover:text-primary items-center flex space-x-1 hover:bg-accent rounded-full transition-colors duration-200",
-              pathName === navItem.link ? "bg-accent text-primary" : ""
-            )}
-          >
-            <span className="block sm:block">{navItem.label}</span>
-          </Link>
-        ))}
+        </div>
+        <TooltipProvider delayDuration={300}>
+          {navItems.map((navItem, idx: number) => (
+            <Tooltip key={`link=${idx}`}>
+              <TooltipTrigger>
+                <Link
+                  key={`link=${idx}`}
+                  href={navItem.link}
+                  className={cn(
+                    "relative text-muted-foreground hover:text-primary items-center flex space-x-1 hover:bg-accent rounded-full transition-colors duration-200",
+                    pathName === navItem.link ? "bg-accent text-primary" : ""
+                  )}
+                >
+                  <span className="block sm:block">{navItem.label}</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent className=" md:hidden mt-3 text-base">
+                {navItem.name}
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </TooltipProvider>
+
         <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Resume</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />

@@ -23,7 +23,7 @@ const HomeIcon = ({ name }: { name: string }) => {
 
   return (
     <div
-      className="cursor-pointer select-none py-2 px-3 hover:bg-accent rounded-full transition-colors duration-200 flex  justify-center space-x-1 "
+      className="cursor-pointer select-none p-2 md:py-2 md:px-3 hover:bg-accent rounded-full transition-colors duration-200 flex  justify-center space-x-1 "
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >

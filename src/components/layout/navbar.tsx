@@ -9,18 +9,15 @@ import { UserIcon } from "@/icons/user-icon";
 import { FloatingNav } from "../ui/floating-navbar";
 export function Navbar() {
   const navItems = [
-    {
-      link: "/",
-      label: <HomeIcon name="Home" />,
-    },
+    { name: "Home", link: "/", label: <HomeIcon name="Home" /> },
     {
       name: "About",
-      link: "/about",
+      link: "/#about",
       label: <UserIcon name="About" />,
     },
     {
       name: "Skills",
-      link: "/skills",
+      link: "/#skills",
       label: <ChevronsLeftRightIcon name="Skills" />,
     },
     {

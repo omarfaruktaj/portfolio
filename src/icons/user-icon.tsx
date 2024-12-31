@@ -29,7 +29,7 @@ const UserIcon = ({ name }: { name: string }) => {
 
   return (
     <div
-      className="cursor-pointer select-none py-2 px-3 space-x-1 hover:bg-accent rounded-full transition-colors duration-200 flex  justify-center"
+      className="cursor-pointer select-none p-2 md:py-2 md:px-3 space-x-1 hover:bg-accent rounded-full transition-colors duration-200 flex  justify-center"
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >
