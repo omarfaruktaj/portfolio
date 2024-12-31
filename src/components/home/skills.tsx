@@ -2,9 +2,14 @@ import { Skill } from "@/types";
 import { Badge } from "../ui/badge";
 
 export default async function Skills() {
-  const result = await fetch("http://localhost:5000/api/skills");
+  const result = await fetch("http://localhost:5000/api/skills", {
+    cache: "no-store",
+  });
+
+  if (!result.ok) {
+    throw new Error("Failed to fetch skills");
+  }
   const skills = await result.json();
-  console.log(skills);
 
   return (
     <section id="skills" className="py-16 px-4 bg-background text-foreground">

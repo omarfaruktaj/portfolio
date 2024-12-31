@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
           <div className="max-w-[768px] mx-auto">
             <Navbar />
             <main className="min-h-screen mx-4 mt-28">{children}</main>
+            <Toaster />
             <Footer />
           </div>
         </ThemeProvider>

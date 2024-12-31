@@ -32,7 +32,7 @@ export function Navbar() {
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "/#contact",
       label: <MessageCircleIcon name="Contact" />,
     },
   ];

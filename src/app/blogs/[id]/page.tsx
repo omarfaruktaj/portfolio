@@ -57,14 +57,13 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
         </div>
       </header>
 
-      <div className="relative w-full h-64 mb-8">
+      <div className="relative w-full h-96 mb-8">
         <Image
           src={blog.image}
           alt={blog.title}
           height={300}
           width={800}
-          objectFit="cover"
-          className="rounded-lg"
+          className="rounded-lg h-full"
         />
       </div>
 

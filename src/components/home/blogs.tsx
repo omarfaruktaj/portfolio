@@ -1,37 +1,18 @@
 import { Blog } from "@/types";
 import BlogCard from "../blog-card";
 
-// const blogs = [
-//   {
-//     title: "Mastering React: Tips and Best Practices",
-//     description:
-//       "A comprehensive guide to writing efficient and maintainable React code, including advanced patterns and state management tips.",
-//     image: "/images/react-tips.jpg",
-//     date: "December 20, 2024",
-//     link: "https://yourblog.com/mastering-react",
-//   },
-//   {
-//     title: "Understanding Tailwind CSS: A Beginner's Guide",
-//     description:
-//       "Learn how to use Tailwind CSS to build beautiful, responsive designs faster than ever.",
-//     image: "/images/tailwind-guide.jpg",
-//     date: "November 15, 2024",
-//     link: "https://yourblog.com/tailwind-guide",
-//   },
-//   {
-//     title: "Node.js for Backend Development: Key Concepts",
-//     description:
-//       "Explore the fundamentals of Node.js, including building REST APIs and optimizing performance for backend applications.",
-//     image: "/images/nodejs-backend.jpg",
-//     date: "October 10, 2024",
-//     link: "https://yourblog.com/nodejs-backend",
-//   },
-// ];
-
 export default async function Blogs() {
-  const result = await fetch("http://localhost:5000/api/articles");
-  console.log(result);
-  const blogs: Blog[] = await result.json();
+  const result = await fetch("http://localhost:5000/api/articles", {
+    cache: "no-store",
+  });
+
+  if (!result.ok) {
+    throw new Error("Failed to fetch blogs");
+  }
+
+  const blogsData: Blog[] = await result.json();
+
+  const blogs = blogsData.slice(0, 4);
 
   return (
     <section id="blogs" className="py-16 px-4 bg-background text-foreground">

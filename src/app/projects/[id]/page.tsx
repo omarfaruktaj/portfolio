@@ -40,7 +40,6 @@ export default async function ProjectDetails({
               alt={project.title}
               height={400}
               width={800}
-              objectFit="cover"
               className="rounded-lg h-[400px]"
             />
           </div>

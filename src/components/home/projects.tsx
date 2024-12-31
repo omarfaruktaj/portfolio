@@ -2,9 +2,17 @@ import { Project } from "@/types";
 import ProjectCard from "../project-card";
 
 export default async function Projects() {
-  const res = await fetch("http://localhost:5000/api/projects");
+  const res = await fetch("http://localhost:5000/api/projects", {
+    cache: "no-store",
+  });
 
-  const projects = await res.json();
+  if (!res.ok) {
+    throw new Error("Failed to fetch projects");
+  }
+
+  const projectsData: Project[] = await res.json();
+
+  const projects = projectsData.slice(0, 4);
 
   return (
     <section id="projects" className="py-16 px-4 bg-background text-foreground">

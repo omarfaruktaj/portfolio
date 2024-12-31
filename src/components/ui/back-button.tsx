@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { ArrowLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button, ButtonProps } from "./button";
 
@@ -28,13 +28,12 @@ export default function BackButton({
 
   return (
     <Button
-      asChild
-      variant={variant ?? "outline"}
-      className={cn(className)}
+      variant={variant ?? "link"}
+      className={cn("rounded-full", className)}
       onClick={handleClick}
     >
       <div className="flex items-center">
-        <ArrowLeft className="mr-2 h-4 w-4" />
+        <ChevronLeft className="mr-2 h-4 w-4" />
         Back
       </div>
     </Button>

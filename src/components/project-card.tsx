@@ -31,8 +31,7 @@ export default function ProjectCard({
               alt={title}
               width={500}
               height={500}
-              objectFit="cover"
-              className="transition-transform duration-300 ease-in-out hover:scale-105"
+              className="object-cover w-full h-full"
             />
           </div>
         </CardHeader>
