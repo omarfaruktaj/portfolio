@@ -6,7 +6,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import readingTime from "reading-time";
 
-export default async function BlogPost({ params }: { params: { id: string } }) {
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const paramValue = await params;
 
   const response = await fetch(

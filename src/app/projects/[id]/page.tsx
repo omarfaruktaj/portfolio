@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 export default async function ProjectDetails({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const paramsValue = await params;
   const response = await fetch(
