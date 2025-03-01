@@ -1,6 +1,7 @@
 "use client";
 
 import { Variants, motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const pathVariants: Variants = {
   normal: { opacity: 1 },
@@ -12,10 +13,18 @@ const pathVariants: Variants = {
 
 const SunIcon = () => {
   const controls = useAnimation();
+  const [isClient, setIsClient] = useState(false);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
   return (
     <div
-      className="cursor-pointer select-none py-2 px-3 hover:bg-accent rounded-full transition-colors duration-200 flex items-center justify-center"
+      className="flex cursor-pointer select-none items-center justify-center rounded-full px-3 py-2 transition-colors duration-200 hover:bg-accent"
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >

@@ -46,7 +46,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
   };
 
   return (
-    <Card className="max-w-sm h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <Card className="h-full max-w-sm overflow-hidden transition-all duration-300 hover:shadow-lg">
       <CardHeader className="p-0">
         <div className="relative h-48 w-full">
           <Link href={`/blogs/${blog._id}`}>
@@ -62,13 +62,13 @@ export default function BlogCard({ blog }: BlogCardProps) {
       </CardHeader>
       <CardContent className="p-4">
         <Link href={`/blogs/${blog._id}`}>
-          <h2 className="text-xl font-semibold mb-2 line-clamp-2 hover:underline">
+          <h2 className="mb-2 line-clamp-2 text-xl font-semibold hover:underline">
             {title}
           </h2>
-          <div className="text-muted-foreground mb-4 line-clamp-3">
+          <div className="mb-4 line-clamp-3 text-muted-foreground">
             {truncatedContent || "Loading content..."}
           </div>
-          <div className="flex flex-wrap gap-1 mb-4">
+          <div className="mb-4 flex flex-wrap gap-1">
             {tags.map((tag) => (
               <Badge key={tag} variant="outline">
                 {tag}
@@ -79,9 +79,9 @@ export default function BlogCard({ blog }: BlogCardProps) {
       </CardContent>
       <CardFooter className="p-4 pt-0 text-sm text-muted-foreground">
         <Link href={`/blogs/${blog._id}`}>
-          <div className="flex items-center justify-between w-full">
+          <div className="flex w-full items-center justify-between">
             <div className="flex items-center">
-              <CalendarIcon className="w-4 h-4 mr-1" />
+              <CalendarIcon className="mr-1 size-4" />
               <span>{formatDate(publicationDate)}</span>
             </div>
           </div>

@@ -7,7 +7,7 @@ const BookTextIcon = ({ name }: { name: string }) => {
 
   return (
     <div
-      className="cursor-pointer  select-none p-2 md:py-2 md:px-3 space-x-1 hover:bg-accent rounded-full transition-colors duration-200 flex justify-center"
+      className="flex  cursor-pointer select-none justify-center space-x-1 rounded-full p-2 transition-colors duration-200 hover:bg-accent md:px-3 md:py-2"
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >
@@ -44,7 +44,7 @@ const BookTextIcon = ({ name }: { name: string }) => {
         <path d="M8 11h8" />
         <path d="M8 7h6" />
       </motion.svg>
-      <div className="hidden md:block text-base">{name}</div>
+      <div className="hidden text-base md:block">{name}</div>
     </div>
   );
 };

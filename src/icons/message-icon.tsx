@@ -29,7 +29,7 @@ const MessageCircleIcon = ({ name }: { name: string }) => {
 
   return (
     <div
-      className="cursor-pointer select-none p-2 md:py-2 md:px-3 space-x-1 hover:bg-accent rounded-full transition-colors duration-200 flex items-center justify-center overflow-hidden"
+      className="flex cursor-pointer select-none items-center justify-center space-x-1 overflow-hidden rounded-full p-2 transition-colors duration-200 hover:bg-accent md:px-3 md:py-2"
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >
@@ -48,7 +48,7 @@ const MessageCircleIcon = ({ name }: { name: string }) => {
       >
         <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
       </motion.svg>
-      <div className="hidden md:block text-base">{name}</div>
+      <div className="hidden text-base md:block">{name}</div>
     </div>
   );
 };

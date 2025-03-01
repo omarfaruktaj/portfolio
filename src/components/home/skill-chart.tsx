@@ -32,10 +32,7 @@ export default function SkillChart({ skills }: SkillChartProps) {
 
   return (
     <div className="">
-      <h2 className="text-2xl font-bold mb-4 text-center text-orange-800">
-        Skill Radar
-      </h2>
-      <div className="w-full h-[400px]">
+      <div className="h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
             <PolarGrid />
@@ -52,7 +49,7 @@ export default function SkillChart({ skills }: SkillChartProps) {
         </ResponsiveContainer>
       </div>
       <div className="mt-4 flex justify-center">
-        <ul className="list-disc list-inside columns-2 md:columns-3 lg:columns-4">
+        <ul className="list-inside list-disc columns-2 md:columns-3 lg:columns-4">
           {skills.map((skill) => (
             <li key={skill.name} className="text-sm">
               {skill.name}: {skill.proficiency}

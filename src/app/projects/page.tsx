@@ -17,20 +17,20 @@ export default async function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 px-4 bg-background text-foreground min-h-screen"
+      className="min-h-screen bg-background px-4 py-16 text-foreground"
     >
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="mb-12 text-center text-4xl font-bold text-primary md:text-5xl">
           My Projects
         </h1>
-        <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-muted-foreground">
           Explore some of my favorite projects, showcasing my skills in
           developing intuitive user interfaces, efficient backends, and scalable
           web applications. Each project represents a milestone in my learning
           and career journey.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard key={project._id} project={project} />
           ))}

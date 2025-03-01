@@ -2,22 +2,22 @@ import { Button } from "../ui/button";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 px-4 bg-background text-foreground">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary text-center">
+    <section id="contact" className="bg-background px-4 py-16 text-foreground">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-4xl">
           Get in Touch
         </h2>
-        <p className="text-lg text-muted-foreground font-medium text-center mb-12">
+        <p className="mb-12 text-center text-lg font-medium text-muted-foreground">
           Whether you have a question, want to discuss a project, or just say
           hello, feel free to drop me a message!
         </p>
 
         <div>
-          <form action="#" method="POST" className="p-8 rounded-lg border">
+          <form action="#" method="POST" className="rounded-lg border p-8">
             <div className="mb-6">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-foreground mb-2"
+                className="mb-2 block text-sm font-medium text-foreground"
               >
                 Your Name
               </label>
@@ -26,14 +26,14 @@ export default function Contact() {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-2 border  rounded-lg focus:ring-primary focus:border-primary"
+                className="w-full rounded-lg border px-4  py-2 focus:border-primary focus:ring-primary"
                 placeholder="Enter your name"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-foreground mb-2"
+                className="mb-2 block text-sm font-medium text-foreground"
               >
                 Your Email
               </label>
@@ -42,14 +42,14 @@ export default function Contact() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 border  rounded-lg focus:ring-primary focus:border-primary"
+                className="w-full rounded-lg border px-4  py-2 focus:border-primary focus:ring-primary"
                 placeholder="Enter your email"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-foreground mb-2"
+                className="mb-2 block text-sm font-medium text-foreground"
               >
                 Message
               </label>
@@ -58,7 +58,7 @@ export default function Contact() {
                 name="message"
                 rows={5}
                 required
-                className="w-full px-4 py-2 border  rounded-lg focus:ring-primary focus:border-primary"
+                className="w-full rounded-lg border px-4  py-2 focus:border-primary focus:ring-primary"
                 placeholder="Write your message here"
               ></textarea>
             </div>

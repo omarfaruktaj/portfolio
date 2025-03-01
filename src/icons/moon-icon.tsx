@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, Transition, useAnimation, Variants } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const svgVariants: Variants = {
   normal: {
@@ -18,10 +19,18 @@ const svgTransition: Transition = {
 
 const MoonIcon = () => {
   const controls = useAnimation();
+  const [isClient, setIsClient] = useState(false);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
   return (
     <div
-      className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center overflow-hidden"
+      className="flex cursor-pointer select-none items-center justify-center overflow-hidden rounded-md p-2 transition-colors duration-200 hover:bg-accent"
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >

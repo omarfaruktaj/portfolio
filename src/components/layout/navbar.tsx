@@ -1,5 +1,3 @@
-"use client";
-
 import { BookTextIcon } from "@/icons/book-text-icon";
 import { BriefcaseIcon } from "@/icons/Briefcase-icon";
 import { ChevronsLeftRightIcon } from "@/icons/code-icon";
@@ -22,7 +20,7 @@ export function Navbar() {
     },
     {
       name: "Projects",
-      link: "/projects",
+      link: "/#projects",
       label: <BriefcaseIcon name="Projects" />,
     },
     {

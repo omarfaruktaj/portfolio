@@ -94,5 +94,5 @@ body {
 .prose h5,
 .prose strong,
 .prose h6 {
-  color: var(--primary);
+  color: "*";
 }

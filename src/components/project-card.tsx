@@ -31,13 +31,13 @@ export default function ProjectCard({
               alt={title}
               width={500}
               height={500}
-              className="object-cover w-full h-full"
+              className="size-full object-cover"
             />
           </div>
         </CardHeader>
         <CardContent className="p-4 pb-0">
           <CardTitle className="mb-2 text-xl font-bold">{title}</CardTitle>
-          <p className="mb-4 text-sm text-muted-foreground line-clamp-3">
+          <p className="mb-4 line-clamp-3 text-sm text-muted-foreground">
             {description}
           </p>
           <div className="mb-4 flex flex-wrap gap-1">
@@ -54,7 +54,7 @@ export default function ProjectCard({
             size={"sm"}
             className="flex-1"
           >
-            <ExternalLink className="mr-2 h-4 w-4" />
+            <ExternalLink className="mr-2 size-4" />
             View Project
           </Button>
 

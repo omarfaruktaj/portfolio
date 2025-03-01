@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className=" text-sm py-6 text-center">
+    <footer className=" py-6 text-center text-sm">
       <p>&copy; 2025 Omar Faruk. All rights reserved.</p>
     </footer>
   );
